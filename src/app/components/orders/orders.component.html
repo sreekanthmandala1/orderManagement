@@ -18,19 +18,19 @@
       </div>
     </form>
   </div>
-  <div class="modal-footer">
+  <div class="modal-footer ">
     <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
   </div>
 </ng-template>
+<div class="text-right">
+  <button class="btn btn btn-outline-primary " (click)="open(content)">New Order</button>
+  </div>
 
-<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
-
-<hr>
 
 <pre>{{ closeResult }}</pre>
 
 
-<table mat-table  [dataSource]="dataSource" class="mat-elevation-z8 ">
+<table mat-table   class="mat-elevation-z8 ">
 
   <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
@@ -73,3 +73,4 @@
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
 </table>
+<button class="btn btn-primary" (click)="onGetOrders()">add orders</button>
