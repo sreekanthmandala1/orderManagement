@@ -18,6 +18,7 @@ export class CurdComponent implements OnInit {
    editMode:boolean = false;
    editIndex:any;
    Edit:boolean = false;
+   fetch:boolean = false;
   // OrderNumber: any;
   // OrderDueDate: any;
   // CustomerBuyerName: any;

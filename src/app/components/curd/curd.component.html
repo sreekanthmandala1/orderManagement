@@ -43,7 +43,7 @@
     </div> -->
     <ng-template #content let-modal>
       <div class="modal-header">
-        <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+        <h2 class="modal-title" id="modal-basic-title">New Order</h2>
         <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -84,7 +84,7 @@
               'Update':
               'Add'}}</button>
             <button class="btn btn-info mx-3" (click)="onSaveProduct()">save</button>
-            <button class="btn btn-success mx-3" (click)="onFetchProduct()">Fetch</button>
+            <button class="btn btn-success mx-3" *ngIf="fetch"(click)="onFetchProduct()">Fetch</button>
           </div>
         </div>
       </div>
@@ -170,7 +170,7 @@
         'Update':
         'Add'}}</button>
       <button class="btn btn-info mx-3" (click)="onSaveProduct()">save</button>
-      <button class="btn btn-success mx-3" (click)="onFetchProduct()">Fetch</button>
+      <button class="btn btn-success mx-3" *ngIf="fetch" (click)="onFetchProduct()">Fetch</button>
     </div>
   </div>
 </div>

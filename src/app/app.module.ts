@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { OrdersComponent } from './components/orders/orders.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularmaterialModule } from './angularmaterial/angularmaterial.module';
 import { FormsModule } from '@angular/forms';
@@ -19,7 +19,6 @@ import { CurdComponent } from './components/curd/curd.component';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    OrdersComponent,
     CurdComponent
   ],
   imports: [
