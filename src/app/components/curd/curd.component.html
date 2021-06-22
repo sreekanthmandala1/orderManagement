@@ -1,4 +1,4 @@
-<div class="container">
+
   <div class="row">
   </div>
   <div class="row">
@@ -43,7 +43,7 @@
     </div> -->
     <ng-template #content let-modal>
       <div class="modal-header">
-        <h2 class="modal-title" id="modal-basic-title">New Order</h2>
+        <h2 class="modal-title newOrder" id="modal-basic-title">New Order</h2>
         <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -84,7 +84,7 @@
               'Update':
               'Add'}}</button>
             <button class="btn btn-info mx-3" (click)="onSaveProduct()">save</button>
-            <button class="btn btn-success mx-3" *ngIf="fetch"(click)="onFetchProduct()">Fetch</button>
+            <button class="btn btn-success mx-3" (click)="onFetchProduct()">Fetch</button>
           </div>
         </div>
       </div>
@@ -95,7 +95,7 @@
       
     </ng-template>
     <div class="text-right">
-      <button class="btn btn btn-outline-primary " (click)="open(content)">New Order</button>
+      <button class="btn btn btn-outline-primary newOrder" (click)="open(content)">New Order</button>
       </div>
     <div class="col-md-12" >
       <div class=" text-center row" style="background-color: rgb(253, 175, 7);color:white;text-align:center;width:100%" id="thead">
@@ -135,8 +135,13 @@
       <div *ngIf="fetching">Fetching products...</div>
     </div>
   </div>
-  <form >
-    <div class="col-md-12 mb-3" >
+
+  <div class="row">
+    <div class="col-5"></div>
+    <div class="col-4"></div>
+    <div class="col-3">
+      <form >
+    
 <div class="form">
   <div class="form-floating mb-3 form-group">
     <input type="text" class="form-control" placeholder="Order Number" id="OrderNumber" #OrderNumber>
@@ -170,11 +175,11 @@
         'Update':
         'Add'}}</button>
       <button class="btn btn-info mx-3" (click)="onSaveProduct()">save</button>
-      <button class="btn btn-success mx-3" *ngIf="fetch" (click)="onFetchProduct()">Fetch</button>
+      <button class="btn btn-success mx-3"  (click)="onFetchProduct()">Fetch</button>
     </div>
   </div>
 </div>
-</div>
-    
   </form>
-</div>
+    
+  </div>
+  
