@@ -98,13 +98,16 @@
       <button class="btn btn btn-outline-primary " (click)="open(content)">New Order</button>
       </div>
     <div class="col-md-12" >
-      <div class="row" style="background-color: rgb(253, 175, 7);color:white;text-align:center;width:100%" id="thead">
+      <div class=" text-center row" style="background-color: rgb(253, 175, 7);color:white;text-align:center;width:100%" id="thead">
         <div class="col-1">#</div>
-        <div class="col-2">Id</div>
-        <div class="col-3">Name</div>
-        <div class="col-2 ">Price</div>
-        <div class="col-2 ">Edit</div>
-        <div class="col-2 ">Delete</div>
+        <div class="col-1">OrderNumber</div>
+          <div class="col-1">OrderDueDate</div>
+          <div class="col-2 ">CustomerBuyerName</div>
+          <div class="col-2">CustomerAddress</div>
+          <div class="col-2">CustomerPhone</div>
+          <div class="col-1 ">OrderTotal</div>
+          <div class="col-1">Edit</div>
+          <div class="col-1 ">Delete</div>
       </div>
       <div *ngIf="!fetching" class="table-wrapper-scroll-y my-custom-scrollbar">
         <div class="row" *ngFor="let product of products; index as i"
@@ -132,7 +135,7 @@
       <div *ngIf="fetching">Fetching products...</div>
     </div>
   </div>
-  <form *ngIf="Edit">
+  <form >
     <div class="col-md-12 mb-3" >
 <div class="form">
   <div class="form-floating mb-3 form-group">

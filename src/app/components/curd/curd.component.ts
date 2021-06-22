@@ -147,7 +147,7 @@ export class CurdComponent implements OnInit {
   }
 
   onEditProduct(index:number){
-    this.Edit = true;
+    // this.Edit = true;
     this.editMode = true;
     this.editIndex = index;
     // console.log(this.products[index].i)
