@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <form class="form">
+        <mat-form-field class="example-full-width">
+          <mat-label>UserName</mat-label>
+          <input type="UserName" matInput [formControl]="userNameFormControl" [errorStateMatcher]="matcher"
+                 placeholder="Ex. sreekanth">
+          <mat-hint></mat-hint>
+          <mat-error *ngIf="!userNameFormControl.hasError('required')">
+            Please enter User Name
+          </mat-error>
+          <mat-error *ngIf="userNameFormControl.hasError('required')">
+            User Name is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      
+        <mat-form-field class="example-full-width">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput [formControl]="passwordFormControl" [errorStateMatcher]="matcher"
+                 placeholder="Ex. password">
+          <mat-hint></mat-hint>
+          <mat-error *ngIf="!passwordFormControl.hasError('required')">
+            Please enter Password
+          </mat-error>
+          <mat-error *ngIf="passwordFormControl.hasError('required')">
+            Password is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <div>
+          <mat-checkbox class="example-margin" >Remember Me</mat-checkbox>
+        </div>
+        <button class="btn btn-primary" [routerLink]="['/orders']">Login</button>
+      </form>
+    </div>
+    <div class="col-4"></div>
+  </div>
+</div>
