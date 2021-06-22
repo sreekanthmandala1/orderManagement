@@ -11,7 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularmaterialModule } from './angularmaterial/angularmaterial.module';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CurdComponent } from './components/curd/curd.component';
+import { OrdersComponent } from './components/orders/orders.component';
 
 
 @NgModule({
@@ -19,7 +19,7 @@ import { CurdComponent } from './components/curd/curd.component';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    CurdComponent
+    OrdersComponent
   ],
   imports: [
     BrowserModule,

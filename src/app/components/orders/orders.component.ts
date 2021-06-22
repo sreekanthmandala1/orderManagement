@@ -1,4 +1,4 @@
-import { OrdersService } from './../../services/orders.service';
+import { OrdersService } from '../../services/orders.service';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
@@ -6,25 +6,18 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
-  selector: 'app-curd',
-  templateUrl: './curd.component.html',
-  styleUrls: ['./curd.component.scss']
+  selector: 'app-orders',
+  templateUrl: './orders.component.html',
+  styleUrls: ['./orders.component.scss']
 })
-export class CurdComponent implements OnInit {
+export class OrdersComponent implements OnInit {
   closeResult = '';
-  
-    // dataTitle = this.ordersService.getDataTitle();
    fetching = false;
    editMode:boolean = false;
    editIndex:any;
    Edit:boolean = false;
    fetch:boolean = false;
-  // OrderNumber: any;
-  // OrderDueDate: any;
-  // CustomerBuyerName: any;
-  // CustomerAddress: any;
-  // CustomerPhone: any;
-  // OrderTotal: any;
+  
   @ViewChild('OrderNumber') OrderNumber:any=ElementRef;
    @ViewChild('OrderDueDate') OrderDueDate:any=ElementRef;
    @ViewChild('CustomerBuyerName') CustomerBuyerName:any=ElementRef;
@@ -41,24 +34,7 @@ export class CurdComponent implements OnInit {
     
   }
 
-  // open(content:any) {
-  //   this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
-  //     this.closeResult = `Closed with: ${result}`;
-  //   }, (reason) => {
-  //     this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-  //   });
-  // }
-
-  // private getDismissReason(reason: any): string {
-  //   if (reason === ModalDismissReasons.ESC) {
-  //     return 'by pressing ESC';
-  //   } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-  //     return 'by clicking on a backdrop';
-  //   } else {
-  //     return `with: ${reason}`;
-  //   }
-  // }
-
+  
   open(content:any) {
     
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
@@ -77,8 +53,6 @@ export class CurdComponent implements OnInit {
       return `with: ${reason}`;
     }
   }
-  
-  
   
   products : any=[
     {
